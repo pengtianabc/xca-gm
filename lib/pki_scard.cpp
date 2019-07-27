@@ -566,6 +566,7 @@ QList<int> pki_scard::possibleHashNids()
 		case EVP_PKEY_EC:
 			switch (mechanism) {
 			case CKM_ECDSA_SHA1:      nids << NID_sha1; break;
+			case CKM_EC_SM3:      nids << NID_sm3; break;
 			}
 			break;
 #endif

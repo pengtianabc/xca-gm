@@ -994,6 +994,7 @@ static int eng_pmeth_ctrl_ec(EVP_PKEY_CTX *ctx, int type, int p1, void *p2)
 			qDebug() << __func__
 				<< "NID_ecdsa_with_SHA1 unexpected";
 			/* fallthrough */
+		case NID_sm3:
 		case NID_sha1:
 		case NID_sha224:
 		case NID_sha256:

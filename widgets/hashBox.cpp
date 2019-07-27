@@ -26,6 +26,7 @@ static const struct {
 	{ "SHA 256", NID_sha256 },
 	{ "SHA 384", NID_sha384 },
 	{ "SHA 512", NID_sha512 },
+	{ "SM3", NID_sm3 },
 };
 
 int hashBox::default_md = DEFAULT_MD_IDX;
