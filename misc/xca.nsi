@@ -43,9 +43,6 @@ SetCompressor /SOLID lzma
 !insertmacro MUI_RESERVEFILE_LANGDLL
 
 !insertmacro MUI_LANGUAGE "English"
-!insertmacro MUI_LANGUAGE "German"
-!insertmacro MUI_LANGUAGE "French"
-!insertmacro MUI_LANGUAGE "Croatian"
 
 ;-----------------------------------
 ; The stuff to install
@@ -115,6 +112,8 @@ Section "Support for PostgreSQL databases" SecPostgreSQL
   SetOutPath $INSTDIR
   File "${BDIR}\sql\libeay32.dll"
   File "${BDIR}\sql\ssleay32.dll"
+  ; File "${BDIR}\sql\libcrypto-1_1.dll"
+  ; File "${BDIR}\sql\libssl-1_1.dll"
   File "${BDIR}\sql\libiconv-2.dll"
   File "${BDIR}\sql\libintl-8.dll"
   File "${BDIR}\sql\libpq.dll"
@@ -132,15 +131,15 @@ SectionEnd
 Section "Translations" SecTrans
 
   File /nonfatal "lang\*.qm"
-  File /nonfatal "${QTDIR}\translations\qt_de.qm"
-  File /nonfatal "${QTDIR}\translations\qt_es.qm"
-  File /nonfatal "${QTDIR}\translations\qt_ru.qm"
-  File /nonfatal "${QTDIR}\translations\qt_fr.qm"
+;  File /nonfatal "${QTDIR}\translations\qt_de.qm"
+;  File /nonfatal "${QTDIR}\translations\qt_es.qm"
+;  File /nonfatal "${QTDIR}\translations\qt_ru.qm"
+;  File /nonfatal "${QTDIR}\translations\qt_fr.qm"
 ;  File /nonfatal "${QTDIR}\translations\qt_hr.qm"
 ;  File /nonfatal "${QTDIR}\translations\qt_tr.qm"
-  File /nonfatal "${QTDIR}\translations\qt_pl.qm"
-  File /nonfatal "${QTDIR}\translations\qt_pt.qm"
-  File /nonfatal "${QTDIR}\translations\qt_sk.qm"
+;  File /nonfatal "${QTDIR}\translations\qt_pl.qm"
+;  File /nonfatal "${QTDIR}\translations\qt_pt.qm"
+;  File /nonfatal "${QTDIR}\translations\qt_sk.qm"
 
 SectionEnd
 
@@ -310,30 +309,16 @@ SectionEnd
 
   ;Language strings
   LangString DESC_SecMain ${LANG_ENGLISH} "XCA main application."
-  LangString DESC_SecMain ${LANG_GERMAN}  "XCA Applikation."
-  LangString DESC_SecMain ${LANG_FRENCH}  "application XCA."
-  LangString DESC_SecMain ${LANG_CROATIAN}  "XCA aplikacija."
 
   LangString DESC_SecMySQL ${LANG_ENGLISH} "MySQL Database Support."
-  LangString DESC_SecMySQL ${LANG_GERMAN}  "MySQL Datenbank Unterstützung."
 
   LangString DESC_SecPostgreSQL ${LANG_ENGLISH} "PostgreSQL Database Support."
-  LangString DESC_SecPostgreSQL ${LANG_GERMAN}  "PostgreSQL Datenbank Unterstützung."
 
   LangString DESC_SecShortcut ${LANG_ENGLISH} "Shortcuts on the desktop and the menu."
-  LangString DESC_SecShortcut ${LANG_GERMAN}  "Programmgruppe auf dem Desktop und im Menu."
-  LangString DESC_SecShortcut ${LANG_FRENCH} "Raccourcis sur le bureau et dans le menu."
-  LangString DESC_SecShortcut ${LANG_CROATIAN} "Precac na radnoj površini i izborniku."
 
   LangString DESC_SecFiles ${LANG_ENGLISH} "File association for *.xdb *.xca *.pem and 'open with' for *.crt *.crl *.pfx *.p7b *.cer"
-  LangString DESC_SecFiles ${LANG_GERMAN}  "Registrierung der Dateiendung *.xdb *.xca *.pem und 'Öffnen mit' für *.crt *.crl *.pfx *.p7b *.cer"
-  LangString DESC_SecFiles ${LANG_FRENCH} "Application par défault pour *.xdb *.xca *.pem et 'Ouvrir avec' pour *.crt *.crl *.pfx *.p7b *.cer"
-  LangString DESC_SecFiles ${LANG_CROATIAN} "Osnovna aplikacija za datoteke *.xdb *.xca *.pem i 'Otvori s' za *.crt *.crl *.pfx *.p7b *.cer"
 
   LangString DESC_SecTrans ${LANG_ENGLISH} "Translations for german, russian, spanish, french and croatian."
-  LangString DESC_SecTrans ${LANG_GERMAN}  "Übersetzungen in deutsch, russisch, spanisch kroatisch und französisch."
-  LangString DESC_SecTrans ${LANG_FRENCH} "Traductions pour l'allemand, le russe, l'espagnol, le français et le croate."
-  LangString DESC_SecTrans ${LANG_CROATIAN} "Prijevodi na njemacki, ruski, španjolski, francuski i hrvatski jezik."
 
   ;Assign language strings to sections
   !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
@@ -346,9 +331,6 @@ SectionEnd
   !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 LangString DESC_Finish ${LANG_ENGLISH} "\r\nEnjoy XCA and free Software"
-LangString DESC_Finish ${LANG_GERMAN} "\r\nViel Spass mit XCA und freier Software"
-LangString DESC_Finish ${LANG_FRENCH} "\r\nAmusez-vous bien avec XCA et les logiciels libres"
-LangString DESC_Finish ${LANG_CROATIAN} "\r\nUživajte u XCA i slobodnom softveru"
 
 ;-----------------------------------
 
