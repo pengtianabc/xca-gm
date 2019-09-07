@@ -129,6 +129,7 @@ builtin_curves::builtin_curves()
 				break;
 			}
 		}
+#if 0
 		if (!flag) {
 			for (j=0; j<ARRAY_SIZE(other_curve_nids); j++) {
 				if (other_curve_nids[j] == nid) {
@@ -139,6 +140,9 @@ builtin_curves::builtin_curves()
 		}
 		if (!flag)
 			continue;
+#else
+		flag = CURVE_OTHER;
+#endif
 
 		EC_GROUP *group = EC_GROUP_new_by_curve_name(nid);
 		EC_GROUP_get_order(group, order, NULL);

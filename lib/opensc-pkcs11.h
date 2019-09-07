@@ -661,6 +661,8 @@ typedef unsigned long ck_mechanism_type_t;
 #define CKM_EC_KEY_PAIR_GEN		(0x1040)
 #define CKM_ECDSA			(0x1041)
 #define CKM_ECDSA_SHA1			(0x1042)
+// GMSSL
+#define CKM_EC_SM3			(0x1043)
 #define CKM_ECDH1_DERIVE		(0x1050)
 #define CKM_ECDH1_COFACTOR_DERIVE	(0x1051)
 #define CKM_ECMQV_DERIVE		(0x1052)
